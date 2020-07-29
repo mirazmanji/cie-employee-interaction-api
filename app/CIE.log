@@ -1,0 +1,63 @@
+2020-07-29 16:44:25,677 [INFO] CIE app started.
+2020-07-29 16:44:25,690 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 16:44:31,881 [WARNING] Authentication failed unknown token request: None
+2020-07-29 16:44:31,882 [INFO] Employee list GET Request
+2020-07-29 16:44:31,882 [INFO] Query top ten employees
+2020-07-29 16:44:31,882 [INFO] Database open connection request.
+2020-07-29 16:44:32,074 [INFO] Database cursor created.
+2020-07-29 16:44:32,114 [INFO] Database close connection request.
+2020-07-29 16:44:32,115 [INFO] Database connection closed.
+2020-07-29 16:44:32,116 [INFO] 127.0.0.1 - - [29/Jul/2020 16:44:32] "[37mGET /employees HTTP/1.1[0m" 200 -
+2020-07-29 17:16:23,991 [INFO] CIE app started.
+2020-07-29 17:16:24,025 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 17:16:27,187 [WARNING] Authentication failed unknown token request: None
+2020-07-29 17:16:27,188 [INFO] 127.0.0.1 - - [29/Jul/2020 17:16:27] "[37mGET /employees HTTP/1.1[0m" 200 -
+2020-07-29 17:53:25,056 [INFO] CIE app started.
+2020-07-29 17:53:25,086 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 17:53:32,637 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:53:32,638 [WARNING] Request denied, no authentication token provided.
+2020-07-29 17:53:32,639 [INFO] 127.0.0.1 - - [29/Jul/2020 17:53:32] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:54:11,485 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:54:11,486 [WARNING] Request denied, no authentication token provided.
+2020-07-29 17:54:11,487 [INFO] 127.0.0.1 - - [29/Jul/2020 17:54:11] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:54:15,750 [INFO] CIE app started.
+2020-07-29 17:54:15,761 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 17:54:18,346 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:54:18,346 [WARNING] Request denied, no authentication token provided.
+2020-07-29 17:54:18,347 [INFO] 127.0.0.1 - - [29/Jul/2020 17:54:18] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:54:20,006 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:54:20,007 [WARNING] Request denied, no authentication token provided.
+2020-07-29 17:54:20,008 [INFO] 127.0.0.1 - - [29/Jul/2020 17:54:20] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:54:20,573 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:54:20,573 [WARNING] Request denied, no authentication token provided.
+2020-07-29 17:54:20,574 [INFO] 127.0.0.1 - - [29/Jul/2020 17:54:20] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:54:52,684 [INFO] CIE app started.
+2020-07-29 17:54:52,709 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 17:55:01,899 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:55:01,900 [WARNING] Authentication failed unknown token request: None
+2020-07-29 17:55:01,902 [CRITICAL] Unexpected exception occurred module 'json' has no attribute 'jsonify'
+2020-07-29 17:55:01,905 [INFO] 127.0.0.1 - - [29/Jul/2020 17:55:01] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 17:55:20,701 [INFO] CIE app started.
+2020-07-29 17:55:20,711 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 17:55:24,611 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 17:55:24,611 [WARNING] Authentication failed unknown token request: None
+2020-07-29 17:55:24,612 [WARNING] Invalid employee number provided to helper method: None.  Exception: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 17:55:24,612 [CRITICAL] Unexpected exception occurred int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 17:55:24,613 [INFO] 127.0.0.1 - - [29/Jul/2020 17:55:24] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 18:01:59,325 [INFO] CIE app started.
+2020-07-29 18:01:59,357 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 18:02:08,265 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 18:02:08,265 [WARNING] Authentication failed unknown token request: None
+2020-07-29 18:02:08,266 [WARNING] Invalid employee number provided to helper method: None.  Exception: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 18:02:08,266 [CRITICAL] Unexpected exception occurred int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 18:02:08,266 [INFO] 127.0.0.1 - - [29/Jul/2020 18:02:08] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 18:02:09,385 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 18:02:09,385 [WARNING] Authentication failed unknown token request: None
+2020-07-29 18:02:09,385 [WARNING] Invalid employee number provided to helper method: None.  Exception: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 18:02:09,385 [CRITICAL] Unexpected exception occurred int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-29 18:02:09,386 [INFO] 127.0.0.1 - - [29/Jul/2020 18:02:09] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-29 18:06:15,476 [INFO] CIE app started.
+2020-07-29 18:06:15,505 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-29 18:06:21,393 [INFO] Employee history GET Request for employee number 100010
+2020-07-29 18:06:21,393 [WARNING] Request denied, no authentication token provided.
+2020-07-29 18:06:21,394 [INFO] 127.0.0.1 - - [29/Jul/2020 18:06:21] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -

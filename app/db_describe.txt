@@ -1,0 +1,41 @@
+""
+
+DB SCHEMA for reference
+
+""
+
+"""
+dept_emp :
+
+('emp_no', 'int(11)', 'NO', 'PRI', None, '')
+('dept_no', 'char(4)', 'NO', 'PRI', None, '')
+('from_date', 'date', 'NO', '', None, '')
+('to_date', 'date', 'NO', '', None, '')
+
+"""
+"""
+employees:
+
+('emp_no', 'int(11)', 'NO', 'PRI', None, '')
+('birth_date', 'date', 'NO', '', None, '')
+('first_name', 'varchar(14)', 'NO', '', None, '')
+('last_name', 'varchar(16)', 'NO', '', None, '')
+('gender', "enum('M','F')", 'NO', '', None, '')
+('hire_date', 'date', 'NO', '', None, '')
+
+"""
+"""
+departments:
+
+('dept_no', 'char(4)', 'NO', 'PRI', None, '')
+('dept_name', 'varchar(40)', 'NO', 'UNI', None, '')
+
+"""
+"""
+salaries:
+
+('emp_no', 'int(11)', 'NO', 'PRI', None, '')
+('salary', 'int(11)', 'NO', '', None, '')
+('from_date', 'date', 'NO', 'PRI', None, '')
+('to_date', 'date', 'NO', '', None, '')
+"""
