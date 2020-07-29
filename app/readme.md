@@ -1,6 +1,6 @@
 # Customer Interaction Ecosystem
 
-Application programming interface that allows users to access employee information.
+Apication programming interface that allows users to access employee information.
 
  - Get basic employee information
  - Get employee information plus salary history
@@ -11,4 +11,6 @@ Application programming interface that allows users to access employee informati
  - Convert list into JSON object for request response
  - Unit test cases of authenticated output
  - Refactor authentication into seperate module
+ 
+ Run app.py and navigate to localhost (0.0.0.0) port 5000.
  
