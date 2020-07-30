@@ -70,6 +70,7 @@ def get_salary_history(emp_no):
     db.close_db(cursor, connection)
     return results
 
+
 # Returns employee information for a given employee, limit 10 for authenticated super user
 def get_employees(enum):
     if enum == "*":
@@ -91,6 +92,7 @@ def get_employees(enum):
     results = list(cursor)
     db.close_db(cursor, connection)
     return results
+
 
 # Compares token to list of authenticated tokens and returns the employee number or * for super user
 def do_authentication(token, enum=""):
