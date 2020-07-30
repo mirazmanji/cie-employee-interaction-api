@@ -247,3 +247,16 @@ TypeError: Object of type date is not JSON serializable
 2020-07-30 06:37:08,000 [INFO] Database close connection request.
 2020-07-30 06:37:08,000 [INFO] Database connection closed.
 2020-07-30 06:37:08,005 [INFO] 127.0.0.1 - - [30/Jul/2020 06:37:08] "[37mGET /employees/100010?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 200 -
+2020-07-30 06:41:28,420 [INFO] Employee history GET Request for employee number 100010
+2020-07-30 06:41:28,423 [WARNING] Request denied, no authentication token provided.
+2020-07-30 06:41:28,425 [INFO] 127.0.0.1 - - [30/Jul/2020 06:41:28] "[37mGET /employees/100010 HTTP/1.1[0m" 200 -
+2020-07-30 10:21:26,533 [INFO] CIE app started.
+2020-07-30 10:21:26,572 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-30 10:21:40,333 [INFO] Authenticated request from super user.
+2020-07-30 10:21:40,335 [INFO] Employee list GET Request
+2020-07-30 10:21:40,336 [INFO] Database open connection request.
+2020-07-30 10:21:40,512 [INFO] Database cursor created.
+2020-07-30 10:21:40,513 [INFO] Query employee list by super user, limit 10
+2020-07-30 10:21:40,550 [INFO] Database close connection request.
+2020-07-30 10:21:40,550 [INFO] Database connection closed.
+2020-07-30 10:21:40,553 [INFO] 127.0.0.1 - - [30/Jul/2020 10:21:40] "[37mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 200 -

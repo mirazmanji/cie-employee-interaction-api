@@ -41,25 +41,22 @@ def emp_history(enum):
     try:
         authenticated, auth_enum = do_authentication(token, enum)
         if authenticated:
-            return {enum: emp_history_helper(auth_enum)}
+            return {enum: get_salary_history(auth_enum)}
         else:
             return "Connection Refused"
     except Exception as e:
         logging.critical("Unexpected exception occurred {}".format(e))
         return "Unknown error. Connection Refused."
 
-# Helper method for elegance, checks enum is valid and returns employee information and history for authenticated user
-def emp_history_helper(enum):
-    try:
-        enum = int(enum)
-    except Exception as e:
-        logging.warning("Invalid employee number provided to helper method: {}.  Exception: {}".format(enum, e))
-        raise e
-    results = get_salary_history(enum)
-    return results
 
 # Returns employee information and history for a given employee
 def get_salary_history(emp_no):
+    try:
+        emp_no = int(emp_no)
+    except Exception as e:
+        logging.warning("Invalid employee number provided to helper method: {}.  Exception: {}".format(enum, e))
+        raise e
+
     logging.info('Query salary history for employee number {}'.format(emp_no))
     cursor, connection = db.connect_db()
     sql_employee = "SELECT `employees`.emp_no, first_name, last_name, dept_name, salary, `salaries`.from_date, `salaries`.to_date " \
