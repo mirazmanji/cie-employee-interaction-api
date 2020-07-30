@@ -11,8 +11,9 @@ Application programming interface that allows users to access employee informati
  - Refactor authentication into seperate module
  - Create an html template to post json response to frontend
  
- # USAGE
+ ### USAGE
  
+ - pip install --upgrade -r requirements.txt
  - Run app.py and navigate to localhost (0.0.0.0) port 5000.
  - /employee GET endpoint for employee data
  - /employee/employeeNumber for employee data and salary info
@@ -20,6 +21,6 @@ Application programming interface that allows users to access employee informati
  - Connect to database from docker: MySQL Employee database 
    repository: https://hub.docker.com/r/genschsa/mysql-employees/
 
- # NOTE
+ ### NOTE
  
  - Endpoint returns JSON with employee ID as key, and SQL list result as value.

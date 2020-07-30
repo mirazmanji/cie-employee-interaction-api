@@ -1,6 +1,5 @@
 from flask import Flask, request
 import logging
-import json
 from authenticated import Auth
 from db import Database
 
