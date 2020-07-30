@@ -19,9 +19,8 @@ def get_employees():
     if auth_enum:
         logging.info("Employee list GET Request")
         results = get_employees(auth_enum)
-        for option in results:
-            print(option)
-        return "Top 10 Employees"
+        to_return = {auth_enum: results}
+        return to_return
     else:
         return "Connection Refused"
 
@@ -42,7 +41,7 @@ def emp_history(enum):
     try:
         authenticated, auth_enum = do_authentication(token, enum)
         if authenticated:
-            return emp_history_helper(auth_enum)
+            return {enum: emp_history_helper(auth_enum)}
         else:
             return "Connection Refused"
     except Exception as e:

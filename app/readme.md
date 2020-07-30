@@ -7,7 +7,6 @@ Application programming interface that allows users to access employee informati
  
  ### TODOS
  
- - Convert list into JSON object to complete request response
  - Unit test cases of authenticated output
  - Refactor authentication into seperate module
  - Create an html template to post json response to frontend
@@ -17,9 +16,10 @@ Application programming interface that allows users to access employee informati
  - Run app.py and navigate to localhost (0.0.0.0) port 5000.
  - /employee GET endpoint for employee data
  - /employee/employeeNumber for employee data and salary info
+ - add ?token= argument to url for authenticated get request
  - Connect to database from docker: MySQL Employee database 
    repository: https://hub.docker.com/r/genschsa/mysql-employees/
 
  # NOTE
  
- - Endpoint returns string confirmation and not JSON object as per TODO.
+ - Endpoint returns JSON with employee ID as key, and SQL list result as value.
