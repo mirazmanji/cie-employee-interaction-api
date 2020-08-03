@@ -71,38 +71,8 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/mysql/connector/network.py", line 509, in open_connection
     self.sock.connect(sockaddr)
 ConnectionRefusedError: [Errno 61] Connection refused
-
 During handling of the above exception, another exception occurred:
-
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 21, in get_employees
-    results = get_employees(auth_enum)
-  File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 88, in get_employees
-    cursor, connection = db.connect_db()
-  File "/Users/TLAC/PycharmProjects/CIE/app/db.py", line 14, in connect_db
-    connection = mysql.connector.connect(**config)
-  File "/usr/local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 179, in connect
-    return MySQLConnection(*args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/mysql/connector/connection.py", line 95, in __init__
-    self.connect(**kwargs)
-  File "/usr/local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 716, in connect
-    self._open_connection()
-  File "/usr/local/lib/python3.7/site-packages/mysql/connector/connection.py", line 206, in _open_connection
-    self._socket.open_connection()
-  File "/usr/local/lib/python3.7/site-packages/mysql/connector/network.py", line 512, in open_connection
-    errno=2003, values=(self.get_address(), _strioerror(err)))
 mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'localhost:3306' (61 Connection refused)
 2020-07-30 06:28:35,158 [INFO] 127.0.0.1 - - [30/Jul/2020 06:28:35] "[35m[1mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 500 -
 2020-07-30 06:29:30,756 [INFO] Authenticated request from super user.
@@ -114,20 +84,6 @@ mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'l
 2020-07-30 06:29:30,905 [INFO] Database connection closed.
 2020-07-30 06:29:30,906 [ERROR] Exception on /employees [GET]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 22, in get_employees
-    return json.dump({auth_enum: results})
 TypeError: dump() missing 1 required positional argument: 'fp'
 2020-07-30 06:29:30,910 [INFO] 127.0.0.1 - - [30/Jul/2020 06:29:30] "[35m[1mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 500 -
 2020-07-30 06:30:15,948 [INFO] CIE app started.
@@ -141,27 +97,6 @@ TypeError: dump() missing 1 required positional argument: 'fp'
 2020-07-30 06:30:20,807 [INFO] Database connection closed.
 2020-07-30 06:30:20,808 [ERROR] Exception on /employees [GET]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 22, in get_employees
-    return json.dumps({auth_enum: results})
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
-    return _default_encoder.encode(obj)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type date is not JSON serializable
 2020-07-30 06:30:20,815 [INFO] 127.0.0.1 - - [30/Jul/2020 06:30:20] "[35m[1mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 500 -
@@ -176,18 +111,6 @@ TypeError: Object of type date is not JSON serializable
 2020-07-30 06:33:54,050 [INFO] Database connection closed.
 2020-07-30 06:33:54,051 [ERROR] Exception on /employees [GET]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 22, in get_employees
     to_return = {{auth_enum: results}}
 TypeError: unhashable type: 'dict'
@@ -203,27 +126,6 @@ TypeError: unhashable type: 'dict'
 2020-07-30 06:34:26,899 [INFO] Database connection closed.
 2020-07-30 06:34:26,900 [ERROR] Exception on /employees [GET]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/TLAC/PycharmProjects/CIE/app/app.py", line 25, in get_employees
-    return json.dumps({auth_enum: results})
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
-    return _default_encoder.encode(obj)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type date is not JSON serializable
 2020-07-30 06:34:26,907 [INFO] 127.0.0.1 - - [30/Jul/2020 06:34:26] "[35m[1mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 500 -
@@ -260,3 +162,21 @@ TypeError: Object of type date is not JSON serializable
 2020-07-30 10:21:40,550 [INFO] Database close connection request.
 2020-07-30 10:21:40,550 [INFO] Database connection closed.
 2020-07-30 10:21:40,553 [INFO] 127.0.0.1 - - [30/Jul/2020 10:21:40] "[37mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 200 -
+2020-07-30 10:55:00,011 [INFO] CIE app started.
+2020-07-30 10:55:00,047 [INFO]  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-07-30 10:55:07,675 [INFO] Authenticated request from super user.
+2020-07-30 10:55:07,678 [INFO] Employee list GET Request
+2020-07-30 10:55:07,679 [INFO] Database open connection request.
+2020-07-30 10:55:07,774 [INFO] Database cursor created.
+2020-07-30 10:55:07,775 [INFO] Query employee list by super user, limit 10
+2020-07-30 10:55:07,798 [INFO] Database close connection request.
+2020-07-30 10:55:07,799 [INFO] Database connection closed.
+2020-07-30 10:55:07,802 [INFO] 127.0.0.1 - - [30/Jul/2020 10:55:07] "[37mGET /employees?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 200 -
+2020-07-30 10:55:32,950 [INFO] Employee history GET Request for employee number 100010
+2020-07-30 10:55:32,954 [INFO] Authenticated request from super user.
+2020-07-30 10:55:32,959 [INFO] Query salary history for employee number 100010
+2020-07-30 10:55:32,963 [INFO] Database open connection request.
+2020-07-30 10:55:33,055 [INFO] Database cursor created.
+2020-07-30 10:55:33,133 [INFO] Database close connection request.
+2020-07-30 10:55:33,134 [INFO] Database connection closed.
+2020-07-30 10:55:33,136 [INFO] 127.0.0.1 - - [30/Jul/2020 10:55:33] "[37mGET /employees/100010?token=e79b1c21-8013-407b-8e34-98d47af49eb2 HTTP/1.1[0m" 200 -
